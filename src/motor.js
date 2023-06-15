@@ -34,3 +34,17 @@ export const comprobarNumero = (texto) => {
 
   return numero > numeroParaAcertar ? EL_NUMERO_ES_MAYOR : EL_NUMERO_ES_MENOR;
 };
+
+export const comprobarNumeroB = (texto, numeroAcertar) => {
+  const numero = parseInt(texto);
+  const esUnNumero = !isNaN(numero);
+
+  if (!esUnNumero) {
+    return NO_ES_UN_NUMERO;
+  }
+  if (numero === numeroAcertar) {
+    return ES_EL_NUMERO_SECRETO;
+  }
+
+  return numero > numeroAcertar ? EL_NUMERO_ES_MAYOR : EL_NUMERO_ES_MENOR;
+};
